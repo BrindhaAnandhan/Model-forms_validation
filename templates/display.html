@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #valid
+        {
+            color: red;
+        }
+        .body
+        {
+            background-color: black;
+            display: inline-block;
+            height: 308px;
+            width: 305px;
+            margin-top: 90PX;
+            border-radius: 15px;
+            
+
+        }
+        form>p
+        {
+            margin-top: 36px;
+        }
+        body
+        {
+            color: white;
+        }
+        input
+        {
+            padding: 5px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+   <center>
+    <div class="body">
+        <form method="POST">
+            {% csrf_token %}
+    
+            {{ ESO.as_p }}
+            
+           <div id="valid"> <h3><b>{{ valid }}</b></h3> </div>
+           
+            <input type="submit" value="Create">
+        </form>
+    </div>
+   </center>
+</body>
+</html>
